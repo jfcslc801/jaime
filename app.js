@@ -6,7 +6,7 @@ const projectRouter = require('./routes/projectRoutes');
 
 const app = express();
 
-// VIEWS ENGINE
+// PUG VIEW ENGINE
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 
