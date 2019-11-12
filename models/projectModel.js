@@ -12,22 +12,32 @@ const projectSchema = new mongoose.Schema({
     trim: true,
     required: [true, 'A project must have a descriptuon.']
   },
+  technologies: {
+    type: String,
+    trim: true,
+    required: [true, 'A project must have a technologies.']
+  },
   imageCover: {
     type: String,
     required: [false, 'A tour must have a cover image.']
+  },
+  website: {
+    type: String
   }
 });
 
 // Tour Model
 const Project = mongoose.model('Project', projectSchema);
 
-const testProject = new Project({
-  name: 'test 2',
-  description: 'test'
+const Projects = new Project({
+  name: 'Piano',
+  description: 'Desktop piano',
+  technologies: 'Javascript, HTML, CSS, ES6',
+  imageCover: 'piano.jpg',
+  website: 'https://piano1-77066.web.app/'
 });
 
-testProject
-  .save()
+Projects.save()
   .then(doc => {
     console.log(doc);
   })

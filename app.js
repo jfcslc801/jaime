@@ -3,6 +3,7 @@ const express = require('express');
 const morgan = require('morgan');
 const AppError = require('./utils/appError');
 const projectRouter = require('./routes/projectRoutes');
+const viewRouter = require('./routes/viewRoutes');
 
 const app = express();
 
@@ -27,10 +28,7 @@ app.use((req, res, next) => {
 });
 
 // ROUTES
-app.get('/', (req, res) => {
-  res.status(200).render('base');
-});
-
+app.use('/', viewRouter);
 app.use('/projects', projectRouter);
 
 // bad link error handler

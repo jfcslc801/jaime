@@ -1,0 +1,23 @@
+extends base
+
+block content
+    main.main
+        .card-container
+
+            each project in projects
+                .card
+                    .card__header
+                        .card__picture
+                            .card__picture-overlay &nbsp;
+                            img.card__picture-img(src=`img/projects/${project.imageCover}`, alt=`${project.name}`)
+                        h3.heading-tertirary
+                            span= project.name
+
+                    .card__details
+                        p.card__text= project.description
+                        
+                    .card__footer
+
+                        p.card__ratings
+                            span= project.technologies
+                        a.btn.btn--green.btn--small(href=`${project.website}`) website
