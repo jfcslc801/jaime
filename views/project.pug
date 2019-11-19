@@ -1,0 +1,28 @@
+extends base
+
+block content 
+  main.main
+    .login-form
+      h2.heading-secondary.ma-bt-lg Create Project
+      form.form
+        .form__group
+          label.form__label(for='name') Name
+          input#name.form__input(type='name', placeholder='Google')
+        .form__group
+          label.form__label(for='description') Description
+          input#description.form__input(type='description', placeholder='Search engine')
+        .form__group
+          label.form__label(for='technologies') Technologies
+          input#technologies.form__input(type='technologies', placeholder='Javascript, HTML, ES6')
+        .form__group
+          label.form__label(for='imageCover') imageCover
+          input#imageCover.form__input(type='imageCover', placeholder='...')
+        .form__group
+          label.form__label(for='website') Website
+          input#website.form__input(type='website', placeholder='www.google.com')
+        .form__group
+          button.btn.btn--green Add project
+
+          
+
+
