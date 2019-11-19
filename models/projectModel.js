@@ -17,7 +17,7 @@ const projectSchema = new mongoose.Schema({
     trim: true,
     required: [true, 'A project must have a technologies.']
   },
-  imageCover: {
+  photo: {
     type: String,
     required: [false, 'A tour must have a cover image.']
   },
@@ -33,7 +33,7 @@ const Projects = new Project({
   name: 'Piano',
   description: 'Desktop piano',
   technologies: 'Javascript, HTML, CSS, ES6',
-  imageCover: 'piano.jpg',
+  photo: 'piano.jpg',
   website: 'https://piano1-77066.web.app/'
 });
 

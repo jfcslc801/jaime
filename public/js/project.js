@@ -3,10 +3,10 @@ const project = async (
   name,
   description,
   technologies,
-  imageCover,
+  photo,
   website
 ) => {
-  console.log(name, description, technologies, imageCover, website);
+  console.log(name, description, technologies, photo, website);
   try {
     const res = await axios({
       method: 'POST',
@@ -15,7 +15,7 @@ const project = async (
         name,
         description,
         technologies,
-        imageCover,
+        photo,
         website
       }
     });
@@ -30,7 +30,7 @@ document.querySelector('.form').addEventListener('submit', e => {
   const name = document.getElementById('name').value;
   const description = document.getElementById('description').value;
   const technologies = document.getElementById('technologies').value;
-  const imageCover = document.getElementById('imageCover').value;
+  const photo = document.getElementById('photo').value;
   const website = document.getElementById('website').value;
-  project(name, description, technologies, imageCover, website);
+  project(name, description, technologies, photo, website);
 });
