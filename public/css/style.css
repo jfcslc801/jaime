@@ -156,13 +156,8 @@ body {
     linear,
     left top,
     right bottom,
-    from(rgba(125, 213, 111, 0.85)),
-    to(rgba(40, 180, 135, 0.85))
-  );
-  background-image: linear-gradient(
-    to bottom right,
-    rgba(125, 213, 111, 0.85),
-    rgba(40, 180, 135, 0.85)
+    from(rgba(0, 0, 0, 0.85)),
+    to(rgba(148, 148, 148, 0.85))
   );
 }
 
@@ -231,7 +226,13 @@ body {
 }
 
 .btn--green {
-  background-color: #55c57a;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    from(rgba(0, 0, 0, 0.85)),
+    to(rgba(148, 148, 148, 0.85))
+  );
   color: #fff;
 }
 .btn--green::after {
