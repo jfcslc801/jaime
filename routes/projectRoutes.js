@@ -6,7 +6,7 @@ const router = express.Router();
 router
   .route('/')
   .get(projectController.getAllProjects)
-  .post(projectController.createProject);
+  .post(projectController.photoUpload, projectController.createProject);
 
 router
   .route('/:id')
