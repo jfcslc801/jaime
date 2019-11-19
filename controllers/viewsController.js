@@ -17,3 +17,9 @@ exports.getProject = (req, res) => {
     title: 'The Forest Hiker.'
   });
 };
+
+exports.createProject = (req, res) => {
+  res.status(200).render('project', {
+    title: 'Create Project'
+  });
+};
