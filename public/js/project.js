@@ -30,7 +30,7 @@ document.querySelector('.form').addEventListener('submit', e => {
   const name = document.getElementById('name').value;
   const description = document.getElementById('description').value;
   const technologies = document.getElementById('technologies').value;
-  const photo = document.getElementById('photo').value;
+  const photo = document.getElementById('photo').files[0].name;
   const website = document.getElementById('website').value;
   project(name, description, technologies, photo, website);
 });
